@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-hdfs" %}
-{% set version = "1.0.1" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-apache-hdfs-{{ version }}.tar.gz
-  sha256: edb82db38352871086348ce7a0c6a3e567c2141626d21ccaf7e43427b5a0312d
+  sha256: 09f34245b20c13f79c8095f58ec1bfebd789c2260590de8c62db58dfc1e1dc32
 
 build:
   number: 0
