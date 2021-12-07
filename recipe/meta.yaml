@@ -17,13 +17,13 @@ build:
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python >=3.6
     - setuptools
-    - wheel
   run:
-    - apache-airflow >=2.1.0
     - python >=3.6
+    - apache-airflow >=2.1.0
+    - python-hdfs >=2.0.4
     - snakebite-py3
 
 test:
