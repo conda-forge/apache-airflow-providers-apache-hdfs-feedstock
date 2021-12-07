@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-hdfs" %}
-{% set version = "2.1.1" %}
+{% set version = "2.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-apache-hdfs-{{ version }}.tar.gz
-  sha256: c1b62410bee1b4f6fea77a1040af80aa5b2fd36dfe89297df3da50e8e72bfcb6
+  sha256: 276f7e05c5bb8615a0fcb687e7c0a7bc1e80b4a79a6a3ae687fba4f965ea7677
 
 build:
   number: 0
@@ -17,13 +17,13 @@ build:
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python >=3.6
     - setuptools
-    - wheel
   run:
-    - apache-airflow >=2.1.0
     - python >=3.6
+    - apache-airflow >=2.1.0
+    - python-hdfs >=2.0.4
     - snakebite-py3
 
 test:
