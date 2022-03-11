@@ -17,15 +17,15 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >=3.7
     - apache-airflow >=2.1.0
+    # conda python-hdfs package includes dependencies for avro, dataframe, and kerberos extras
     - python-hdfs >=2.0.4
     - snakebite-py3
-
 test:
   imports:
     - airflow.providers.apache.hdfs
