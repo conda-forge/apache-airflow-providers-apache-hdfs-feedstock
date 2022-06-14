@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-hdfs" %}
-{% set version = "2.2.3" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-apache-hdfs-{{ version }}.tar.gz
-  sha256: 73f7c1789265c1e4b4dfd2b44afa2a54294387ba0597d335664def6a6575aa4d
+  sha256: f2cf59a86f174ce1072ff23224152432bf467d4a3e394274ebaf673e12968b9f
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.1.0
+    - apache-airflow >=2.2.0
     # conda python-hdfs package includes dependencies for avro, dataframe, and kerberos extras
     - python-hdfs >=2.0.4
     - snakebite-py3
@@ -39,7 +39,9 @@ about:
   home: https://airflow.apache.org/
   summary: Provider for Apache Airflow. Implements apache-airflow-providers-apache-hdfs package
   license: Apache-2.0
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-apache-hdfs/stable/index.html
   dev_url: https://github.com/apache/airflow/
