@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-hdfs" %}
-{% set version = "3.0.1" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-apache-hdfs-{{ version }}.tar.gz
-  sha256: 4cc3e5e2cedfae67e599106d08e83686f68c35ba845819a0d7da96f0678ef45f
+  sha256: ad054361e50d5e47afd3631175d3b062826ad799c21c9dab29d35a70e54f486d
 
 build:
   noarch: python
@@ -22,7 +22,6 @@ requirements:
   run:
     - python >=3.7
     - apache-airflow >=2.2.0
-    # conda python-hdfs package includes dependencies for avro, dataframe, and kerberos extras
     - python-hdfs >=2.0.4
     - snakebite-py3
 
