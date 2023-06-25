@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-hdfs" %}
-{% set version = "4.0.0" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-apache-hdfs-{{ version }}.tar.gz
-  sha256: 5402b41d9e060ca8cd0e3da2191f12c7446ab6e98b27365f14bd1665aaba905e
+  sha256: 754a42fcde6a24cd07634594898dada7a445fa6d1710b2eef1974e16bf30ef0c
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
-    - setuptools >=67.2.0
+    - python >=3.8
+    - setuptools >=67.2.0,<68.0.0
     - pip
   run:
-    - python >=3.7
+    - python >=3.8
     - apache-airflow >=2.4.0
     - python-hdfs >=2.0.4
 
