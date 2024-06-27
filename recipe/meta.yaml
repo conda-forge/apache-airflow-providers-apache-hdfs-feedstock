@@ -22,6 +22,7 @@ requirements:
   run:
     - python >=3.8
     - apache-airflow >=2.7.0
+    - pandas >=2.1.2,<2.2
     - python-hdfs >=2.5.4
 
 test:
