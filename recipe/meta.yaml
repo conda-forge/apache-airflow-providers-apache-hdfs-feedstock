@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-hdfs" %}
-{% set version = "4.6.0" %}
+{% set version = "4.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_hdfs-{{ version }}.tar.gz
-  sha256: a31f6fe8b170adc15e5d160e0e26ffa93b78804fdee466bffcc8feaa4f77f620
+  sha256: eee80875e507e79ba514dd60d08d7769b90a158eb60ee388c5678a462c2d6989
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.0
     - pip
   run:
-    - python >=3.8
-    - apache-airflow >=2.8.0
+    - python >={{ python_min }},<4.dev0
+    - apache-airflow >=2.9.0
     - pandas >=2.1.2,<2.2
     - python-hdfs >=2.5.4
 
@@ -31,6 +31,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
