@@ -1,5 +1,6 @@
 {% set name = "apache-airflow-providers-apache-hdfs" %}
-{% set version = "4.10.0" %}
+{% set version = "4.10.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_hdfs-{{ version }}.tar.gz
-  sha256: 4083382421e47cdce134bc7bc6a5a70fd9372437ab501ed8c0786a2daebcbd3d
+  sha256: 266ba52f5cfadcbcc39e54933e3f1ce9bcb2d4711657b1258cfa576b28006373
 
 build:
   noarch: python
@@ -24,7 +25,7 @@ requirements:
     - apache-airflow >=2.10.0
     # the more restrictive version for py>=312
     - python-hdfs >=2.5.4
-    - pandas >=2.1.2,<2.2
+    - pandas >=2.1.2
 
 test:
   imports:
