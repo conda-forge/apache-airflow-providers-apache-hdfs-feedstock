@@ -23,9 +23,9 @@ requirements:
     - python >={{ python_min }}
     - apache-airflow >=2.11.0
     # more restrictive for python >=3.12
-    - python-hdfs >=2.5.4
+    - python-hdfs >=2.7.3
     # more restrictive for python >=3.13
-    - pandas >=2.1.2
+    - pandas >=2.2.3
 
 test:
   imports:
