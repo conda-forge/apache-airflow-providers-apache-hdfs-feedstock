@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-hdfs
-  version: "4.11.2"
+  version: 4.11.3
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_apache_hdfs-${{ version }}.tar.gz
-  sha256: 108a6ddda4e1b6605074bbab1e3a7f0051bf0d0b1a8d59c3db377d12d18084b9
+  sha256: 39bf5d24e6a5c7d78cbea61598d28312c3d32b400113bca0bdae6873d20c4211
 
 build:
   noarch: python
@@ -26,6 +26,8 @@ requirements:
     - apache-airflow-providers-common-compat >=1.12.0
     # more restrictive for python >=3.12
     - python-hdfs >=2.7.3
+    # more restrictive for python >=3.13
+    - fastavro >=1.10.0
     # more restrictive for python >=3.13
     - pandas >=2.2.3
 tests:
