@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-hdfs
-  version: "4.11.3"
+  version: 4.11.3
 
 package:
   name: ${{ name|lower }}
@@ -26,6 +26,8 @@ requirements:
     - apache-airflow-providers-common-compat >=1.12.0
     # more restrictive for python >=3.12
     - python-hdfs >=2.7.3
+    # more restrictive for python >=3.13
+    - fastavro >=1.10.0
     # more restrictive for python >=3.13
     - pandas >=2.2.3
 tests:
