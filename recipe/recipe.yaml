@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-hdfs
-  version: 4.11.4
+  version: "4.11.4"
 
 package:
   name: ${{ name|lower }}
@@ -24,8 +24,15 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.12.0
-    - python-hdfs >=2.5.4
-    - pandas >=2.1.2
+    # more restrictive for python >=3.12
+    - python-hdfs >=2.7.3
+    # start hdfs[avro,dataframe,kerberos]
+    # end hdfs[avro,dataframe,kerberos]
+    # more restrictive for python >=3.14
+    - fastavro >=1.12.1
+    # more restrictive for python >=3.14
+    - pandas >=2.3.3
+
 tests:
   - python:
       imports:
