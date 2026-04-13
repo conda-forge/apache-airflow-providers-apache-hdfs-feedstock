@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-hdfs
-  version: "4.11.4"
+  version: "4.11.5"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_apache_hdfs-${{ version }}.tar.gz
-  sha256: b079001052c3e94838d1ed3d84b834919fafb65a521a7f0bbe09b488b5083965
+  sha256: 828ce4d6597ccd6d8e2b4f912af4f97ff2359ad1ca16dcd25ffc1e5938eef2a0
 
 build:
   noarch: python
@@ -38,7 +38,9 @@ tests:
       imports:
         - airflow.providers.apache.hdfs
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/apache/airflow/
