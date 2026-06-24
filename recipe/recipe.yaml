@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-apache-hdfs
-  version: "4.12.0"
+  version: "4.12.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_apache_hdfs-${{ version }}.tar.gz
-  sha256: d783b0c9a1b24deb311073870e5144ebaec5c034713f5631976d8b7d34853113
+  sha256: c1b629debd2387c3b5360c9443766c9c4f7161aeb8583fcdb30fa5000124da53
 
 build:
   noarch: python
