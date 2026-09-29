@@ -24,8 +24,15 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.12.0
-    - python-hdfs >=2.5.4
-    - pandas >=2.1.2
+    # tightest of upstream's floors (python >=3.12)
+    - python-hdfs >=2.7.3
+    # start hdfs[avro,dataframe,kerberos]
+    - requests-kerberos >=0.7.0
+    # end hdfs[avro,dataframe,kerberos]
+    # tightest of upstream's floors (python >=3.14)
+    - fastavro >=1.12.1
+    # tightest of upstream's floors (python >=3.14)
+    - pandas >=2.3.3
 tests:
   - python:
       imports:
